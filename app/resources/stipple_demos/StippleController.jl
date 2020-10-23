@@ -66,8 +66,8 @@ function stipple_buttons()
   if true # authenticated()
     update_login_to_nav_setting!(nav_setting, Genie.Router.@params)
 
-    # html(ui_stipple_buttons(sb_model), layout=read("app/layouts/app.jl.html", String), nav_setting=nav_setting)
-    html(ui_stipple_buttons(sb_model))
+    html(ui_stipple_buttons(sb_model), layout=read("app/layouts/app.jl.html", String), nav_setting=nav_setting)
+    # html(ui_stipple_buttons(sb_model))
 
 
   else
