@@ -1,0 +1,33 @@
+<%
+partial("app/layouts/stipple_styles.jl.html", nav_setting = nav_setting)
+%>
+
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="col-md-6">
+
+      <div class="card mb-3">
+        <h5 style="margin:0;" class="card-header">Login</h5>
+        <div class="card-body">
+          <span>$(output_flash())</span>
+          <p class="card-text">Please authenticate to access PolyChrome Platform.</p>
+          <form method="POST" action="$(linkto(:login))" class="" enctype="multipart/form-data">
+            <div class="form-group">
+              <label _for="auth_username">Username</label>
+              <input type="text" id="auth_username" name="username" class="form-control" placeholder="Username" />
+            </div>
+      
+            <div class="form-group">
+              <label _for="auth_password">Password</label>
+              <input type="password" id="auth_password" name="password" class="form-control" placeholder="Password" />
+            </div>
+      
+            <input type="submit" value="Login" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-3"></div>
